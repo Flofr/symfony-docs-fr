@@ -47,6 +47,8 @@ Pour l'utiliser, il vous suffit de changer quelques paramètres dans ``config.ym
                     dsn:      "mysql:dbname=mydatabase"
                     user:     myuser
                     password: mypassword
+                calls:
+                    - [setAttribute, [3, 2]] # \PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION
 
             session.handler.pdo:
                 class:     Symfony\Component\HttpFoundation\Session\Storage\Handler\PdoSessionHandler
